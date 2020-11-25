@@ -285,7 +285,7 @@ def rfft(x, n=NFFT):
 
 def dct(x, type=2, axis=1, norm='ortho'):
     from scipy.fftpack import dct
-    return dct(x)
+    return dct(x=x, type=type, axis=axis, norm=norm)
 
 
 def powspec(sig,
