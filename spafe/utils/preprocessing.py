@@ -77,8 +77,8 @@ def framing(sig, fs=16000, win_len=0.025, win_hop=0.01):
         raise ParameterError(ErrorMsgs["win_len_win_hop_comparison"])
 
     # compute frame length and frame step (convert from seconds to samples)
-    frame_length = win_len * fs
-    frame_step = win_hop * fs
+    frame_length = int(win_len * fs)
+    frame_step = int(win_hop * fs)
     signal_length = len(sig)
     frames_overlap = frame_length - frame_step
 
